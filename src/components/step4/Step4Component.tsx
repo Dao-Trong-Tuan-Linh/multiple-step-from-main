@@ -1,18 +1,18 @@
 import { useState } from "react";
 import { usePlan } from "../../store/planStore/PlanContext";
 import { useAddOns } from "../../store/addOnsStore/AddOnsContext";
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./Step4Component.css";
 const Step4Component = () => {
   const { chosePlan } = usePlan();
   const { choseAddOns } = useAddOns();
-  const navigate = useNavigate();
   const [isConfirm, setIsConfirm] = useState(false);
-  const total = choseAddOns.reduce(
-    (total, item) => total + item?.money,
-    chosePlan.money
-  );
+  const [totalAddOns,setTotalAddOns] = useState(0)
+  
+  for(let i = 0 ; i < choseAddOns.length ;i++) {
+    if(choseAddOns[i]?.money) setTotalAddOns(totalAddOns + Number(choseAddOns[i].money))
+  }
+  const totalMoney = totalAddOns + Number(chosePlan.money)
   return isConfirm ? (
     <div className="container-complete">
       <img src="/public/images/icon-thank-you.svg" />
@@ -33,9 +33,9 @@ const Step4Component = () => {
           <div className="container-plan--left">
             <h3 className="plan-name">
               {chosePlan.type == "mo"
-                ? `${chosePlan?.name}(Monthly)`
+                ? `${chosePlan?.name ?? ''}(Monthly)`
                 : chosePlan.type == "yr"
-                ? `${chosePlan?.name}(Yearly)`
+                ? `${chosePlan?.name ?? ''}(Yearly)`
                 : ""}
             </h3>
             <Link className="change-link" to="/step2">
@@ -43,7 +43,7 @@ const Step4Component = () => {
             </Link>
           </div>
           <h3 className="plan-money">
-            {`$${chosePlan?.money}/${chosePlan?.type}`}
+            {`$${chosePlan?.money ?? ''}/${chosePlan?.type ?? ''}`}
           </h3>
         </div>
 
@@ -51,14 +51,14 @@ const Step4Component = () => {
           {choseAddOns.map((addOn) => (
             <div className="item-addOn">
               <span className="item-addOn--name">{addOn.name}</span>
-              <span className="item-addOn--money">{`+$${addOn.money}/${addOn.type}`}</span>
+              <span className="item-addOn--money">{`+$${addOn.money ?? ''}/${addOn.type ?? ''}`}</span>
             </div>
           ))}
         </div>
       </div>
       <div className="container-total">
         <span className="total-title">Total</span>
-        <h3 className="total-value">{`$${total}/${chosePlan.type}`}</h3>
+        <h3 className="total-value">{`$${totalMoney}/${chosePlan.type ?? ''}`}</h3>
       </div>
       <div className="container-btn">
         <Link className="link-previous" to={"/step3"}>

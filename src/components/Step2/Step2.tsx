@@ -3,8 +3,8 @@ import "./Step2.css";
 import { Link } from "react-router-dom";
 import { usePlan } from "../../store/planStore/PlanContext";
 import {useAddOns} from '../../store/addOnsStore/AddOnsContext'
-import { useNavigate,Navigate } from "react-router-dom";
-import Swt from '../Swr/SwrComponent'
+import { useNavigate } from "react-router-dom";
+
 
 const planMonth = [
   {
@@ -62,10 +62,6 @@ interface Plan {
   name?: string;
   money?: number;
   type?: string;
-}
-
-type Props = {
-  chosePlan:Plan
 }
 
 const Step2 = () => {

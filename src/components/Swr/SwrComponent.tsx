@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './SwrComponent.css'
 const SwrComponent = () => {
     return (

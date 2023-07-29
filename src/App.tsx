@@ -6,7 +6,7 @@ import Step3 from './page/Step3'
 import Step4 from './page/Step4'
 import Swr from '../src/components/Swr/SwrComponent'
 import NotFound from './components/NotFound/NotFound'
-import {useInfo} from './store/infoStore/InfoContext'
+
 
 interface IRoute {
   path:string,
