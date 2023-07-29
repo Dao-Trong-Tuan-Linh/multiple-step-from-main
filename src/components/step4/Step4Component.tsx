@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { usePlan } from "../../store/planStore/PlanContext";
 import { useAddOns } from "../../store/addOnsStore/AddOnsContext";
-import {AddOns} from "../../store/addOnsStore/AddOns"
 import { Link } from "react-router-dom";
 import "./Step4Component.css";
 const Step4Component = () => {
