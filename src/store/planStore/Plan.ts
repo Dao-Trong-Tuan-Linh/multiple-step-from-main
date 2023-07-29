@@ -1,8 +1,8 @@
 export interface Plan{
-    id?:string,
-    name?:string,
-    money?:number,
-    type?:string
+    id:string,
+    name:string,
+    money:number,
+    type:string
 }
 
 export interface PlanContextType{

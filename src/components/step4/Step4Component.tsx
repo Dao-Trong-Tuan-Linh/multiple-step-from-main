@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { usePlan } from "../../store/planStore/PlanContext";
 import { useAddOns } from "../../store/addOnsStore/AddOnsContext";
+import {AddOns} from "../../store/addOnsStore/AddOns"
 import { Link } from "react-router-dom";
 import "./Step4Component.css";
 const Step4Component = () => {
   const { chosePlan } = usePlan();
   const { choseAddOns } = useAddOns();
   const [isConfirm, setIsConfirm] = useState(false);
-  const [totalAddOns,setTotalAddOns] = useState(0)
-  
-  for(let i = 0 ; i < choseAddOns.length ;i++) {
-    if(choseAddOns[i]?.money) setTotalAddOns(totalAddOns + Number(choseAddOns[i].money))
+  function getSum(total:number,item:AddOns) {
+    if(item.money) return total + item.money
+    return total
   }
-  const totalMoney = totalAddOns + Number(chosePlan.money)
+  const totalAddOns = choseAddOns.reduce(getSum,0)
+  const totalMoney = chosePlan.money  + totalAddOns
   return isConfirm ? (
     <div className="container-complete">
       <img src="./public/images/icon-thank-you.svg" />
