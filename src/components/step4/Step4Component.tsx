@@ -14,7 +14,7 @@ const Step4Component = () => {
   console.log(totalMoney)
   return isConfirm ? (
     <div className="container-complete">
-      <img src="./public/images/icon-thank-you.svg" />
+      <img src='/public/images/icon-thank-you.svg' />
       <h1 className="thank-you">Thank you</h1>
       <p className="description">
         Thanks for confirming your subscription! We hope you have fun using our

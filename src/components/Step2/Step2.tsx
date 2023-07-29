@@ -10,21 +10,21 @@ const planMonth = [
   {
     id:"pm1",
     name: "Arcade",
-    img: "./public/images/icon-arcade.svg",
+    img: '/public/images/icon-arcade.svg',
     money: 9,
     type: "mo",
   },
   {
     id:"pm2",
     name: "Advanced",
-    img: "./public/images/icon-advanced.svg",
+    img: '/public/images/icon-advanced.svg',
     money: 12,
     type: "mo",
   },
   {
     id:"pm3",
     name: "Pro",
-    img: "./public/images/icon-pro.svg",
+    img: '/public/images/icon-pro.svg',
     money: 15,
     type: "mo",
   },
@@ -34,7 +34,7 @@ const planYear = [
   {
     id:"py1",
     name: "Arcade",
-    img: "./public/images/icon-arcade.svg",
+    img: '/public/images/icon-arcade.svg',
     money: 90,
     type: "yr",
     promotion: "2 months free",
@@ -42,7 +42,7 @@ const planYear = [
   {
     id:"py2",
     name: "Advanced",
-    img: "./public/images/icon-advanced.svg",
+    img: '/public/images/icon-advanced.svg',
     money: 120,
     type: "yr",
     promotion: "2 months free",
@@ -50,7 +50,7 @@ const planYear = [
   {
     id:"py3",
     name: "Pro",
-    img: "./public/images/icon-pro.svg",
+    img: '/public/images/icon-pro.svg',
     money: 150,
     type: "yr",
     promotion: "2 months free",
