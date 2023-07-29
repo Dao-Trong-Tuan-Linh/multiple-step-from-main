@@ -9,11 +9,11 @@ interface DefaultLayoutProps {
 
 const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   const [link,setLink] = useState('/step1')
-  let location = useLocation();
+  const location = useLocation();
   useEffect(() => {
     console.log(location)
     setLink(location.pathname)
-  },[location.pathname])
+  },[location])
   return (
     <div className="background">
       <div className="container">
