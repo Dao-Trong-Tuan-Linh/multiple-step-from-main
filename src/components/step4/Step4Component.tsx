@@ -8,12 +8,11 @@ const Step4Component = () => {
   const { chosePlan } = usePlan();
   const { choseAddOns } = useAddOns();
   const [isConfirm, setIsConfirm] = useState(false);
-  function getSum(total:number,item:AddOns) {
-    if(item.money) return total + item.money
-    return total
-  }
-  const totalAddOns = choseAddOns.reduce(getSum,0)
-  const totalMoney = chosePlan.money  + totalAddOns
+  
+  const totalAddOns = choseAddOns.reduce((pre,cur) => cur.money ? pre + cur.money : pre,0)
+  
+  const totalMoney = Number(chosePlan.money) + totalAddOns
+  console.log(totalMoney)
   return isConfirm ? (
     <div className="container-complete">
       <img src="./public/images/icon-thank-you.svg" />
