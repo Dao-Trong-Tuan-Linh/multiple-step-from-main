@@ -1,0 +1,64 @@
+.container-addOns{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap:20px;
+}
+
+.item-addOns{
+    padding: 0 20px;
+    width: 100%;
+    height: 70px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+}
+
+.item-addOns.active{
+    border: 1px solid var(--purplish-blue);
+}
+
+.item-addOns-left{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.check-box{
+    width: 24px;
+    height: 24px;
+}
+
+.item-addOns-name{
+    color:var(--marine-blue);
+    margin-bottom: 5px;
+}
+
+.item-addOns-desc{
+    color:var(--cool-gray);
+}
+
+.item-addOns-sale{
+    color:var(--purplish-blue);
+}
+
+@media screen and (max-width:899px) {
+    .item-addOns{
+        padding: 0 10px;
+    }
+    .item-addOns-name{
+        font-size: 16px;
+    }
+
+    .item-addOns-desc{
+        font-size: 13px;
+    }
+
+    .item-addOns-sale{
+        font-size: 14px;
+    }
+}

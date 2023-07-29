@@ -1,0 +1,151 @@
+.title{
+    color:var( --marine-blue);
+    margin-bottom: 0.5rem;
+
+}
+
+.desc{
+    color:var(--cool-gray)
+}
+
+.container-plans{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-plan{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:40px;
+    width: 140px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 15px 0 15px 10px;
+    cursor: pointer;
+}
+
+.item-plan:hover{
+    border: 2px solid var(--purplish-blue);
+}
+
+.item-plan.active {
+    border: 2px solid var(--purplish-blue);
+}
+
+
+.item-plan-desc{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.item-plan-name{
+    font-size: 16px;
+    color:var(--marine-blue);
+    text-align: left;
+}
+
+.item-plan-money{
+    font-size: 14px;
+    color:var(--cool-gray);
+    text-align: left;
+}
+
+.item-plan-promotion{
+    font-weight: 500;
+    color:var(--marine-blue);
+}
+
+.container-time{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--magnolia);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+.btn-toggle{
+    width: 60px;
+    height: 30px;
+    background-color: var(--marine-blue);
+    border-radius: 20px;
+    
+}
+
+.circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    transform: translateX(-15px);
+    transition-duration: 0.4s;
+}
+
+.circle.yearly{
+    transform: translateX(15px);
+}
+
+.time{
+    font-weight: 500;
+    color:var(--cool-gray);
+}
+
+.time.active{
+    color:var(--marine-blue);
+}
+
+.link-previous{
+    text-decoration: none;
+    font-weight: 500;
+    color:var(--cool-gray);
+    text-align: center;
+    line-height: 40px;
+}
+
+@media screen and (max-width:899px) {
+    .item-plan{
+        width: 100px;
+       
+    }
+}
+
+@media screen and (max-width:599px) {
+    .container-plans{
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .item-plan{
+        flex-direction: row;
+        width: 100%;
+        gap:20px;
+    }
+
+    .item-plan-desc{
+        
+    }
+
+
+    .link-previous{
+        position: fixed;
+        left: 10px;
+        bottom: 16px;
+        z-index: 1;
+    }
+}
+

@@ -1,0 +1,68 @@
+.container-finishingUp{
+    margin-top: 30px;
+    width: 100%;
+    background-color: var(--magnolia);
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.container-plan{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.plan-name{
+    margin-bottom: 5px;
+}
+
+.change-link,.description{
+    color:var(--cool-gray);
+}
+
+.description{
+    margin-top: 15px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.plan-money,.plan-name,.item-addOn--money,.thank-you{
+    color:var(--marine-blue);
+}
+
+.thank-you{
+    margin-top: 25px;
+}
+
+.item-addOn,.container-total{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-total{
+    margin-top: 20px;
+}
+
+.item-addOn--name,.total-title{
+    color:var(--cool-gray)
+}
+
+
+.total-value{
+    color:var(--purplish-blue);
+    font-size: 24px;
+}
+
+.container-complete{
+    width: 100%;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
